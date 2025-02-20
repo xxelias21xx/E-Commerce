@@ -33,9 +33,8 @@ exports.ActualizarCliente=async(req,res)=>{
     try {
         const objectId =new MongoCone.Types.ObjectId(id);
         const VeriDocu = await TblCliente.findOne({ NroDocu });
-        const idveri=VeriDocu._id.toString();
         if (VeriDocu && VeriDocu._id.toString() !== objectId.toString()) {
-            return res.status(400).json({ mensaje: 'El número de documento ya está en uso por otro cliente', id,idveri });
+            return res.status(400).json({ mensaje: 'El número de documento ya está en uso por otro cliente' });
         }
         const DataCliente=await TblCliente.findByIdAndUpdate(
             objectId,
