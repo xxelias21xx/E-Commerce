@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"NomUsuario\": \"ELias\",\r\n  \"ApeUsuario\":\"Diaz Diaz\",\r\n  \"EmailUsuario\": \"testPrueba13@example.com\",\r\n  \"password\": \"DemoPrueba13\"\r\n}",
+					"raw": "{\r\n  \"NomUsuario\": \"Juan\",\r\n  \"ApeUsuario\": \"Perez\",\r\n  \"EmailUsuario\": \"juan.perez@example.com\",\r\n  \"password\": \"123456\",\r\n  \"roles\": \"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,6 +36,406 @@
 						"api",
 						"usuario",
 						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/usuario/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmailUsuario\": \"juan.perez@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/usuario/login",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"usuario",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/registrarSucursal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NomSucursal\": \"Sucursal B\",\r\n  \"DireSucursal\": \"Av. Peru lt 15\",\r\n  \"CeluSucursal\": \"974125863\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/registrarSucursal",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"sucursal",
+						"registrarSucursal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/actualizarSucursal/67b7a727bd182f2e6c183acf",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NomSucursal\": \"Sucursal Z\",\r\n  \"DireSucursal\": \"Av. Huaylas Mexia Mz 25B\",\r\n  \"CeluSucursal\": \"999999999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/actualizarSucursal/67b7a727bd182f2e6c183acf",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"sucursal",
+						"actualizarSucursal",
+						"67b7a727bd182f2e6c183acf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/eliminarSucursal/67b7a727bd182f2e6c183acf",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/sucursal/eliminarSucursal/67b7a727bd182f2e6c183acf",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"sucursal",
+						"eliminarSucursal",
+						"67b7a727bd182f2e6c183acf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/registrarCliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TipoDocu\":\"DNI\",\r\n    \"NroDocu\":\"48759621\", \r\n    \"NomCliente\":\"Pablo\", \r\n    \"ApeCliente\":\"Tolomeo Perez\", \r\n    \"DireCliente\":\"av Belaunde lt12\", \r\n    \"TelCliente\":\"963258741\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/registrarCliente",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"cliente",
+						"registrarCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/ActualizarCliente/67b7a8bcbd182f2e6c183ad2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TipoDocu\":\"DNI\",\r\n    \"NroDocu\":\"42569825\", \r\n    \"NomCliente\":\"Jimena\", \r\n    \"ApeCliente\":\"Suarez Perez\", \r\n    \"DireCliente\":\"av Torrez lt12\", \r\n    \"TelCliente\":\"999239991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/ActualizarCliente/67b7a8bcbd182f2e6c183ad2",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"cliente",
+						"ActualizarCliente",
+						"67b7a8bcbd182f2e6c183ad2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/EliminarCliente/67b7a8bcbd182f2e6c183ad2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/cliente/EliminarCliente/67b7a8bcbd182f2e6c183ad2",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"cliente",
+						"EliminarCliente",
+						"67b7a8bcbd182f2e6c183ad2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/registrarProducto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjdhM2I2YmQxODJmMmU2YzE4M2FjYyIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE3NDAwOTE1MDUsImV4cCI6MTc0MDE3NzkwNX0.W-RKLGIJpAV7ZZDuR_JEmKW83mV3FBRhXe6Gr0aYGn8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NomProdu\": \"Polo modelo 2025\",\r\n  \"DescProdu\": \"Polo manga larga, con estampado de animes variados\",\r\n  \"TallaProdu\":\"Talla 14\",\r\n  \"PrecioProdu\": 50,\r\n  \"StockSucursal\": [\r\n    {\r\n      \"SucursalId\": \"67b7a727bd182f2e6c183acf\",\r\n      \"stock\": 100\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/registrarProducto",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"producto",
+						"registrarProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/ActualizarProducto/67b7b0cea22ff0db6814f1b0",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjdhM2I2YmQxODJmMmU2YzE4M2FjYyIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE3NDAwOTE1MDUsImV4cCI6MTc0MDE3NzkwNX0.W-RKLGIJpAV7ZZDuR_JEmKW83mV3FBRhXe6Gr0aYGn8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NomProdu\": \"Polo modelo 2024\",\r\n  \"DescProdu\": \"Polo manga larga, con estampado de animes variados, distintos colores\",\r\n  \"TallaProdu\":\"Talla 10\",\r\n  \"PrecioProdu\": 102\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/ActualizarProducto/67b7b0cea22ff0db6814f1b0",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"producto",
+						"ActualizarProducto",
+						"67b7b0cea22ff0db6814f1b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/EliminarProducto/67b7b0cea22ff0db6814f1b0",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjdhM2I2YmQxODJmMmU2YzE4M2FjYyIsInJvbGVzIjoiYWRtaW4iLCJpYXQiOjE3NDAwOTE1MDUsImV4cCI6MTc0MDE3NzkwNX0.W-RKLGIJpAV7ZZDuR_JEmKW83mV3FBRhXe6Gr0aYGn8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/producto/EliminarProducto/67b7b0cea22ff0db6814f1b0",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"producto",
+						"EliminarProducto",
+						"67b7b0cea22ff0db6814f1b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/pedido/registrarPedido",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdCliente\":\"67b7a8bcbd182f2e6c183ad2\", \r\n    \"NroPedido\":\"0001\", \r\n    \"IdSucursal\":\"67b7a727bd182f2e6c183acf\",\r\n    \"Total\":510, \r\n    \"Fecha\":\"2025-02-20\", \r\n    \"Estado\":\"Pendiente\",\r\n    \"Productos\":[\r\n        {\r\n        \"NroItem\":\"1\",\r\n        \"IdProducto\":\"67b7b0cea22ff0db6814f1b0\",\r\n        \"CantoProdu\":\"5\",\r\n        \"PrecProdu\":102,\r\n        \"TotItem\":510\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/pedido/registrarPedido",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"pedido",
+						"registrarPedido"
 					]
 				}
 			},
