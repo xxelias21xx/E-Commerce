@@ -1,6 +1,6 @@
 const MongoCone = require('mongoose');
 const bcrypt = require('bcrypt');
-
+const rolesPerm = ["admin", "moderator", "user"];
 const Usuario=new MongoCone.Schema({
     NomUsuario:{
         type:String,
@@ -14,12 +14,17 @@ const Usuario=new MongoCone.Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/.+\@.+\..+/, 'Please fill a valid email address']
+        match: [/.+\@.+\..+/, 'Por favor, rellene una dirección de correo electrónico válida']
     },
     password: {
         type: String,
         required: true
-      }
+      },
+    roles: {
+        type: String,
+        enum: rolesPerm,
+        required: true
+    }
 });
 
 Usuario.pre('save', async function (next) {

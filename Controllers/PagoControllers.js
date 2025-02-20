@@ -15,7 +15,7 @@ exports.RegistrarPagoPedido=async(req,res)=>{
             month: month,
             year: year,
             email: email,
-            amount: MontPago,
+            amount: (MontPago*1000),
             currency_code: currency_code,
             installments: installments,
             description: description

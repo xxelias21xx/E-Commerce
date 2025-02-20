@@ -74,3 +74,12 @@ exports.EliminarProducto = async (req, res) => {
         res.status(500).json({ mensaje: 'Error del servidor', Error: error.message });
     }
 };
+
+exports.ListarProductos = async (req, res) => {
+    try {
+        const productos = await TblProducto.find();
+        res.status(200).json(productos);
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Ocurrió un problema al listar los productos', error: error.message });
+    }
+};

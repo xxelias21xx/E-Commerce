@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const Autoriza = require('../Middlewares/UsuarioMiddlewares');
+const {Autoriza, esAdmin, esModerador, esUser} = require('../Middlewares/UsuarioMiddlewares');
+// const esAdmin=require('../Middlewares/VeriAdmin');
 const { InicioSesion, RegistrarUsuario } = require('../Controllers/UsuarioControllers');
 const { RegistrarSucursal, ActualizarSucursal, EliminarSucursal} = require('../Controllers/SucursalControllers');
-const { ResgistrarNewProducto,ActualizarProducto,EliminarProducto} = require('../Controllers/ProductoControllers');
+const { ResgistrarNewProducto,ActualizarProducto,EliminarProducto,ListarProductos} = require('../Controllers/ProductoControllers');
 const { RegistrarCliente,ActualizarCliente,EliminarCliente} = require('../Controllers/ClienteControllers');
 const { RegistrarPedido} = require('../Controllers/PedidoControllers');
 const { RegistrarPagoPedido,EliminarPagoPedido} = require('../Controllers/PagoControllers');
@@ -20,9 +21,10 @@ router.put('/sucursal/actualizarSucursal/:id', ActualizarSucursal);
 router.delete('/sucursal/eliminarSucursal/:id', EliminarSucursal);
 
 //Definiendo rutas de producto
-router.post('/producto/registrarProducto', ResgistrarNewProducto);
-router.put('/producto/ActualizarProducto/:id', ActualizarProducto);
-router.delete('/producto/EliminarProducto/:id', EliminarProducto);
+router.post('/producto/registrarProducto', Autoriza, esAdmin, ResgistrarNewProducto);
+router.put('/producto/ActualizarProducto/:id', Autoriza, esAdmin, ActualizarProducto);
+router.delete('/producto/EliminarProducto/:id', Autoriza, esAdmin, EliminarProducto);
+router.get('/producto/listarProductos', Autoriza, esUser,ListarProductos);
 
 //Definiendo rutas de Cliente
 router.post('/cliente/registrarCliente', RegistrarCliente);
@@ -33,8 +35,10 @@ router.delete('/cliente/EliminarCliente/:id', EliminarCliente);
 router.post('/pedido/registrarPedido', RegistrarPedido);
 
 //Definiendo rutas de Pago
-router.post('/pago/registrarPago', RegistrarPagoPedido);
-router.delete('/pago/EliminarPago/', EliminarPagoPedido);
+router.post('/pago/registrarPago', Autoriza,esAdmin, RegistrarPagoPedido);
+
+router.delete('/pago/EliminarPago/', Autoriza, esAdmin, EliminarPagoPedido);
+
 
 //Definiendo rutas de proceso de pago
 router.post('/procesoPago/RegistrarProcesoPago', ProcesandoPago);

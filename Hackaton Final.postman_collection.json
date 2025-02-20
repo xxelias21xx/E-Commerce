@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "4f23e9b2-2906-4676-ac4d-c6886e5ee8d4",
+		"name": "Hackaton Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31166930"
+	},
+	"item": [
+		{
+			"name": "https://e-commerce-l11w.onrender.com/Ecommerce/api/usuario/registrarUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NomUsuario\": \"ELias\",\r\n  \"ApeUsuario\":\"Diaz Diaz\",\r\n  \"EmailUsuario\": \"testPrueba13@example.com\",\r\n  \"password\": \"DemoPrueba13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e-commerce-l11w.onrender.com/Ecommerce/api/usuario/registrarUsuario",
+					"protocol": "https",
+					"host": [
+						"e-commerce-l11w",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"Ecommerce",
+						"api",
+						"usuario",
+						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
